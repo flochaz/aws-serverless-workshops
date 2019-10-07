@@ -70,8 +70,8 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "wildrydes-master-20191007113349-deployment",
-					"S3Key": "amplify-builds/WildRydesLambda-6964764a465945702b59-build.zip"
+					"S3Bucket": "wildrydes-prod-20191007151936-deployment",
+					"S3Key": "amplify-builds/WildRydesLambda-33363755673567473370-build.zip"
 				}
 			}
 		},

@@ -27,5 +27,26 @@
                 "wildrydes291aa911": {}
             }
         }
+    },
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "wildrydes-prod-20191007151936-authRole",
+            "UnauthRoleArn": "arn:aws:iam::590672219346:role/wildrydes-prod-20191007151936-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::590672219346:role/wildrydes-prod-20191007151936-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "wildrydes-prod-20191007151936-deployment",
+            "UnauthRoleName": "wildrydes-prod-20191007151936-unauthRole",
+            "StackName": "wildrydes-prod-20191007151936",
+            "StackId": "arn:aws:cloudformation:eu-west-1:590672219346:stack/wildrydes-prod-20191007151936/1c4b3570-e905-11e9-93fb-0290e291f53e"
+        },
+        "categories": {
+            "auth": {
+                "wildrydes291aa911": {}
+            },
+            "function": {
+                "WildRydesLambda": {},
+                "DynamoDB": {}
+            }
+        }
     }
 }
