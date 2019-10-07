@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/ride",
+            "lambdaFunction": "WildRydesLambda",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "ride",
+    "apiName": "ride",
+    "functionArns": [
+        {
+            "lambdaFunction": "WildRydesLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "wildrydes-master-20191007113349-authRole",
+        "unAuthRoleName": "wildrydes-master-20191007113349-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "WildRydesLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
