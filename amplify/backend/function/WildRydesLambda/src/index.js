@@ -42,7 +42,7 @@ exports.handler = (event, context, callback) => {
     // Because we're using a Cognito User Pools authorizer, all of the claims
     // included in the authentication token are provided in the request context.
     // This includes the username as well as other attributes.
-    const username = event.requestContext.authorizer.claims['cognito:username'];
+    const username = event.requestContext.authorizer.claims['email'];
 
     // The body field of the event in a proxy integration is a raw string.
     // In order to extract meaningful values, we need to first parse this string
@@ -53,6 +53,12 @@ exports.handler = (event, context, callback) => {
     const pickupLocation = requestBody.PickupLocation;
 
     const unicorn = findUnicorn(pickupLocation);
+
+    AWSXRay.captureFunc('annotations', function(subsegment){
+      subsegment.addAnnotation('username', username);
+      subsegment.addAnnotation('unicornName', unicorn.Name);
+      subsegment.addMetadata("pickupLocation", pickupLocation);
+    });
 
     recordRide(rideId, username, unicorn).then(() => {
         // You can use the callback function to provide a return value from your Node.js
