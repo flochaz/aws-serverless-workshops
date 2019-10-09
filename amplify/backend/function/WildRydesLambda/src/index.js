@@ -4,6 +4,9 @@ const AWS = require('aws-sdk');
 
 const ddb = new AWS.DynamoDB.DocumentClient();
 
+const AWSXRay = require('aws-xray-sdk-core');
+AWSXRay.captureAWSClient(ddb.service);
+
 const fleet = [
     {
         Name: 'Bucephalus',

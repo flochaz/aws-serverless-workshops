@@ -74,7 +74,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "wildrydes-prod-20191007151936-deployment",
-					"S3Key": "amplify-builds/WildRydesLambda-654961624d5677352b2b-build.zip"
+					"S3Key": "amplify-builds/WildRydesLambda-61445a6f6971336f4757-build.zip"
 				}
 			}
 		},
